@@ -20,17 +20,17 @@ const App = () => {
     sender: {},
   });
   const validateOne = Yup.object().shape({
-    payout_district: Yup.string().required('This field is required'),
+    payout_district: Yup.string().required('Please select district'),
     select_agent: Yup.array().required('This field is required'),
-    amount: Yup.number().required('This field is required'),
+    amount: Yup.number().required('Enter amount in NRS'),
   });
   const validateTwo = Yup.object().shape({
     receiver_name: Yup.string()
       .required('This field is required')
       .min(7, 'Enter Full Name'),
-    receiver_address: Yup.string().required('This field is required'),
+    receiver_address: Yup.string().required('Receiver address is required'),
     receiver_number: Yup.string()
-      .required('This field is required')
+      .required('Receiver Number cannot be empty')
       .max(10, 'Enter valid number')
       .min(10, 'Enter valid number'),
     relation: Yup.string().required('Please select relation'),
@@ -42,7 +42,6 @@ const App = () => {
     axios
       .post('http://192.168.190.128:8000/api/bmt/execute/', formdata)
       .then(res => {
-        //console.log(res.data.message);
         setSuccess(res.data.message);
       });
 
@@ -61,7 +60,7 @@ const App = () => {
     setUserInput(prev => ({ ...prev, ...newData }));
     setCurrentStep(prev => prev - 1);
   };
-  console.log(success);
+
   const steps = [
     <Stepone data={userInput} validate={validateOne} next={handleNext} />,
     <Steptwo

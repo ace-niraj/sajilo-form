@@ -13,13 +13,11 @@ const Steptwo = ({ next, prev, data, validate }) => {
       .get('http://192.168.190.128:8000/api/bmt/balance/')
       .then(res => {
         setDetail(res.data.data.user_kyc);
-        console.log(detail);
       })
       .catch(err => err.message);
   }, []);
   const handleSubmit = values => {
     values.sender = detail;
-    console.log(values);
     next(values, true);
   };
 
