@@ -15,7 +15,7 @@ const Stepone = ({ next, data, validate }) => {
 
   useEffect(() => {
     axios
-      .get('http://192.168.190.128:8000/api/bmt/district/')
+      .get('https://remittance.sajilopay.com.np/api/bmt/district/')
       .then(res => {
         setDistrict(res.data.district);
       })
@@ -23,7 +23,7 @@ const Stepone = ({ next, data, validate }) => {
   }, []);
   useEffect(() => {
     axios
-      .get('http://192.168.190.128:8000/api/bmt/agent/')
+      .get('https://remittance.sajilopay.com.np/api/bmt/agent/')
       .then(res => {
         const val = res.data.agent;
         val.map(el => {
@@ -41,7 +41,7 @@ const Stepone = ({ next, data, validate }) => {
     let totalAmount = senderMoney + chargeAmount;
     setTotal(totalAmount);
     axios
-      .get('http://192.168.190.128:8000/api/bmt/balance/')
+      .get('https://remittance.sajilopay.com.np/api/bmt/balance/')
       .then(res => {
         if (res.data.data.wallet.balance >= totalAmount && totalAmount > 0) {
           setMove(true);
@@ -131,7 +131,6 @@ const Stepone = ({ next, data, validate }) => {
             ) : (
               <Typography color='secondary'>Insufficient Balance</Typography>
             )}
-            {console.log(move)}
             <Grid xs={6} item>
               <Button
                 disabled={!move}

@@ -40,7 +40,7 @@ const App = () => {
   const [success, setSuccess] = useState();
   const makeapirequest = formdata => {
     axios
-      .post('http://192.168.190.128:8000/api/bmt/execute/', formdata)
+      .post('https://remittance.sajilopay.com.np/api/bmt/execute/', formdata)
       .then(res => {
         setSuccess(res.data.message);
       });
