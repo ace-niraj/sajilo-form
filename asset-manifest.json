@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.js": "/sajilo-form/static/js/main.16b14faf.chunk.js",
-    "main.js.map": "/sajilo-form/static/js/main.16b14faf.chunk.js.map",
+    "main.js": "/sajilo-form/static/js/main.fa0ba139.chunk.js",
+    "main.js.map": "/sajilo-form/static/js/main.fa0ba139.chunk.js.map",
     "runtime-main.js": "/sajilo-form/static/js/runtime-main.9a8b89ff.js",
     "runtime-main.js.map": "/sajilo-form/static/js/runtime-main.9a8b89ff.js.map",
-    "static/js/2.e1d1d439.chunk.js": "/sajilo-form/static/js/2.e1d1d439.chunk.js",
-    "static/js/2.e1d1d439.chunk.js.map": "/sajilo-form/static/js/2.e1d1d439.chunk.js.map",
+    "static/js/2.9a0211cd.chunk.js": "/sajilo-form/static/js/2.9a0211cd.chunk.js",
+    "static/js/2.9a0211cd.chunk.js.map": "/sajilo-form/static/js/2.9a0211cd.chunk.js.map",
     "index.html": "/sajilo-form/index.html",
-    "static/js/2.e1d1d439.chunk.js.LICENSE.txt": "/sajilo-form/static/js/2.e1d1d439.chunk.js.LICENSE.txt"
+    "static/js/2.9a0211cd.chunk.js.LICENSE.txt": "/sajilo-form/static/js/2.9a0211cd.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.9a8b89ff.js",
-    "static/js/2.e1d1d439.chunk.js",
-    "static/js/main.16b14faf.chunk.js"
+    "static/js/2.9a0211cd.chunk.js",
+    "static/js/main.fa0ba139.chunk.js"
   ]
 }
