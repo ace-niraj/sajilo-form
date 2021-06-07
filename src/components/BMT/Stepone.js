@@ -14,8 +14,7 @@ const Stepone = ({ next, data, validate }) => {
   const [move, setMove] = useState(false);
 
   useEffect(() => {
-    const accesstoken =
-      'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjI1NjU5NzEyLCJqdGkiOiJiODk0MmY3N2E5NzE0OTM2OGY5NTg2MTRjM2E4ODczYyIsInVzZXJfaWQiOjR9.LNvuLVf_lJ-sJDoFt4xGfAlR8g_A6Fbbz2kAI5b4WSk';
+   
     const axiosConfig = {
       headers: {
         Authorization: `Bearer ${accesstoken}`,
@@ -29,8 +28,7 @@ const Stepone = ({ next, data, validate }) => {
       .catch(err => err.message);
   }, []);
   useEffect(() => {
-    const accesstoken =
-      'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjI1NjU5NzEyLCJqdGkiOiJiODk0MmY3N2E5NzE0OTM2OGY5NTg2MTRjM2E4ODczYyIsInVzZXJfaWQiOjR9.LNvuLVf_lJ-sJDoFt4xGfAlR8g_A6Fbbz2kAI5b4WSk';
+   
     const axiosConfig = {
       headers: {
         Authorization: `Bearer ${accesstoken}`,
@@ -54,8 +52,7 @@ const Stepone = ({ next, data, validate }) => {
     let chargeAmount = (senderMoney / 100) * 10;
     let totalAmount = senderMoney + chargeAmount;
     setTotal(totalAmount);
-    const accesstoken =
-      'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjI1NjU5NzEyLCJqdGkiOiJiODk0MmY3N2E5NzE0OTM2OGY5NTg2MTRjM2E4ODczYyIsInVzZXJfaWQiOjR9.LNvuLVf_lJ-sJDoFt4xGfAlR8g_A6Fbbz2kAI5b4WSk';
+  
     const axiosConfig = {
       headers: {
         Authorization: `Bearer ${accesstoken}`,
