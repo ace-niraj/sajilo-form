@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Formik, Form } from 'formik';
 import { Button, Grid, Typography } from '@material-ui/core';
-import TextFieldWrapper from './FormUi/TextFieldWrapper';
-import SelectFieldWrapper from './FormUi/SelectFieldWrapper';
+import TextFieldWrapper from '../FormUi/TextFieldWrapper';
+import SelectFieldWrapper from '../FormUi/SelectFieldWrapper';
 import axios from 'axios';
 
 const Stepone = ({ next, data, validate }) => {

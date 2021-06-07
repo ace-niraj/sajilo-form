@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Formik, Form } from 'formik';
-import TextFieldWrapper from './FormUi/TextFieldWrapper';
+import TextFieldWrapper from '../FormUi/TextFieldWrapper';
 import { Button, Grid } from '@material-ui/core';
 import axios from 'axios';
 import { Purpose, Relation } from './Steptwo_data';
-import SelectFieldWrapper from './FormUi/SelectFieldWrapper';
+import SelectFieldWrapper from '../FormUi/SelectFieldWrapper';
 
 const Steptwo = ({ next, prev, data, validate }) => {
   const [detail, setDetail] = useState({});
