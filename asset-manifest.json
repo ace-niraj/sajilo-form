@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/sajilo-form/static/js/main.fa0ba139.chunk.js",
-    "main.js.map": "/sajilo-form/static/js/main.fa0ba139.chunk.js.map",
+    "main.js": "/sajilo-form/static/js/main.f0d88a98.chunk.js",
+    "main.js.map": "/sajilo-form/static/js/main.f0d88a98.chunk.js.map",
     "runtime-main.js": "/sajilo-form/static/js/runtime-main.9a8b89ff.js",
     "runtime-main.js.map": "/sajilo-form/static/js/runtime-main.9a8b89ff.js.map",
     "static/js/2.9a0211cd.chunk.js": "/sajilo-form/static/js/2.9a0211cd.chunk.js",
@@ -12,6 +12,6 @@
   "entrypoints": [
     "static/js/runtime-main.9a8b89ff.js",
     "static/js/2.9a0211cd.chunk.js",
-    "static/js/main.fa0ba139.chunk.js"
+    "static/js/main.f0d88a98.chunk.js"
   ]
 }
