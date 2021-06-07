@@ -39,8 +39,20 @@ const Main = () => {
   const [currentStep, setCurrentStep] = useState(0);
   const [success, setSuccess] = useState();
   const makeapirequest = formdata => {
+    const accesstoken =
+      'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjI1NjU5NzEyLCJqdGkiOiJiODk0MmY3N2E5NzE0OTM2OGY5NTg2MTRjM2E4ODczYyIsInVzZXJfaWQiOjR9.LNvuLVf_lJ-sJDoFt4xGfAlR8g_A6Fbbz2kAI5b4WSk';
+    const axiosConfig = {
+      headers: {
+        Authorization: `Bearer ${accesstoken}`,
+      },
+    };
+
     axios
-      .post('https://remittance.sajilopay.com.np/api/bmt/execute/', formdata)
+      .post(
+        'https://remittance.sajilopay.com.np/api/bmt/execute/',
+        formdata,
+        axiosConfig
+      )
       .then(res => {
         setSuccess(res.data.message);
       });

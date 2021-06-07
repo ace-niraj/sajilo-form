@@ -14,16 +14,30 @@ const Stepone = ({ next, data, validate }) => {
   const [move, setMove] = useState(false);
 
   useEffect(() => {
+    const accesstoken =
+      'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjI1NjU5NzEyLCJqdGkiOiJiODk0MmY3N2E5NzE0OTM2OGY5NTg2MTRjM2E4ODczYyIsInVzZXJfaWQiOjR9.LNvuLVf_lJ-sJDoFt4xGfAlR8g_A6Fbbz2kAI5b4WSk';
+    const axiosConfig = {
+      headers: {
+        Authorization: `Bearer ${accesstoken}`,
+      },
+    };
     axios
-      .get('https://remittance.sajilopay.com.np/api/bmt/district/')
+      .get('https://remittance.sajilopay.com.np/api/bmt/district/', axiosConfig)
       .then(res => {
         setDistrict(res.data.district);
       })
       .catch(err => err.message);
   }, []);
   useEffect(() => {
+    const accesstoken =
+      'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjI1NjU5NzEyLCJqdGkiOiJiODk0MmY3N2E5NzE0OTM2OGY5NTg2MTRjM2E4ODczYyIsInVzZXJfaWQiOjR9.LNvuLVf_lJ-sJDoFt4xGfAlR8g_A6Fbbz2kAI5b4WSk';
+    const axiosConfig = {
+      headers: {
+        Authorization: `Bearer ${accesstoken}`,
+      },
+    };
     axios
-      .get('https://remittance.sajilopay.com.np/api/bmt/agent/')
+      .get('https://remittance.sajilopay.com.np/api/bmt/agent/', axiosConfig)
       .then(res => {
         const val = res.data.agent;
         val.map(el => {
@@ -40,8 +54,15 @@ const Stepone = ({ next, data, validate }) => {
     let chargeAmount = (senderMoney / 100) * 10;
     let totalAmount = senderMoney + chargeAmount;
     setTotal(totalAmount);
+    const accesstoken =
+      'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjI1NjU5NzEyLCJqdGkiOiJiODk0MmY3N2E5NzE0OTM2OGY5NTg2MTRjM2E4ODczYyIsInVzZXJfaWQiOjR9.LNvuLVf_lJ-sJDoFt4xGfAlR8g_A6Fbbz2kAI5b4WSk';
+    const axiosConfig = {
+      headers: {
+        Authorization: `Bearer ${accesstoken}`,
+      },
+    };
     axios
-      .get('https://remittance.sajilopay.com.np/api/bmt/balance/')
+      .get('https://remittance.sajilopay.com.np/api/bmt/balance/', axiosConfig)
       .then(res => {
         if (res.data.data.wallet.balance >= totalAmount && totalAmount > 0) {
           setMove(true);
